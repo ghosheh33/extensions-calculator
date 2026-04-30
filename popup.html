@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    
+    <div class="top-header">
+      <button id="settingsBtn" class="theme-btn" title="الإعدادات">⚙️</button>
+      <div class="history" id="history"></div>
+    </div>
+
+    <div id="settingsMenu" class="settings-menu hidden">
+      <div class="menu-item">
+        <span>اللون:</span>
+        <input type="color" id="colorPicker" class="color-picker" value="#ff8a00">
+      </div>
+      <div class="menu-item">
+        <span>الشكل:</span>
+        <div class="shape-btns">
+          <button class="shape-btn" data-theme="glass">زجاجي</button>
+          <button class="shape-btn" data-theme="light">فاتح</button>
+          <button class="shape-btn" data-theme="neon">نيون</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="display">
+      <input type="text" id="result" value="0" disabled>
+    </div>
+    <div class="buttons">
+      <button class="btn action" id="clear">C</button>
+      <button class="btn action" data-val="+/-">+/-</button>
+      <button class="btn action" data-val="%">%</button>
+      <button class="btn operator" data-val="/">÷</button>
+
+      <button class="btn" data-val="7">7</button>
+      <button class="btn" data-val="8">8</button>
+      <button class="btn" data-val="9">9</button>
+      <button class="btn operator" data-val="*">×</button>
+
+      <button class="btn" data-val="4">4</button>
+      <button class="btn" data-val="5">5</button>
+      <button class="btn" data-val="6">6</button>
+      <button class="btn operator" data-val="-">-</button>
+
+      <button class="btn" data-val="1">1</button>
+      <button class="btn" data-val="2">2</button>
+      <button class="btn" data-val="3">3</button>
+      <button class="btn operator" data-val="+">+</button>
+
+      <button class="btn zero" data-val="0">0</button>
+      <button class="btn" data-val=".">.</button>
+      <button class="btn operator" id="equal">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Calculator",
+  "version": "1.0",
+  "description": "آلة حاسبة بسيطة منبثقة.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "افتح الآلة الحاسبة"
+  },
+  "icons": {
+    "16": "Icons/icon16.png",
+    "48": "Icons/icon48.png",
+    "128": "Icons/icon128.png"
+  }
+}
