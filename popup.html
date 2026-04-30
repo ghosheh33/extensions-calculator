@@ -5,56 +5,114 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="calculator">
+  <div id="calculator" class="calculator">
     
+    <div id="toast" class="toast">تم النسخ</div>
+
     <div class="top-header">
-      <button id="settingsBtn" class="theme-btn" title="الإعدادات">⚙️</button>
-      <div class="history" id="history"></div>
+      <div class="header-actions">
+        <button id="settingsBtn" class="theme-btn">⋮</button>
+        <button id="showHistoryBtn" class="theme-btn">◷</button>
+      </div>
+      <div class="tabs">
+        <button id="tabCalc" class="tab-btn active">حاسبة</button>
+        <button id="tabConv" class="tab-btn">محول</button>
+      </div>
     </div>
 
     <div id="settingsMenu" class="settings-menu hidden">
       <div class="menu-item">
-        <span>اللون:</span>
-        <input type="color" id="colorPicker" class="color-picker" value="#ff8a00">
+        <span>اللون</span>
+        <input type="color" id="colorPicker" class="color-picker" value="#007aff">
       </div>
       <div class="menu-item">
-        <span>الشكل:</span>
+        <span>الشكل</span>
         <div class="shape-btns">
-          <button class="shape-btn" data-theme="glass">زجاجي</button>
+          <button class="shape-btn" data-theme="glass">رمادي</button>
           <button class="shape-btn" data-theme="light">فاتح</button>
-          <button class="shape-btn" data-theme="neon">نيون</button>
+          <button class="shape-btn" data-theme="neon">داكن</button>
         </div>
       </div>
+      <div class="menu-item">
+        <span>متقدم</span>
+        <label class="switch">
+          <input type="checkbox" id="sciToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div id="historyDrawer" class="history-drawer">
+      <div class="drawer-header">
+        <span>السجل</span>
+        <button id="closeHistory" class="close-btn">×</button>
+      </div>
+      <div id="historyList" class="history-list"></div>
     </div>
     
-    <div class="display">
-      <input type="text" id="result" value="0" disabled>
+    <div id="calcSection">
+      <div class="history" id="history"></div>
+      <div class="display">
+        <input type="text" id="result" value="0" readonly>
+      </div>
+      
+      <div class="buttons">
+        <button class="btn sci-btn action" data-val="(">(</button>
+        <button class="btn sci-btn action" data-val=")">)</button>
+        <button class="btn action" id="clear">C</button>
+        <button class="btn action" data-val="+/-">±</button>
+        <button class="btn action" data-val="%">%</button>
+        <button class="btn operator" data-val="/">÷</button>
+        
+        <button class="btn sci-btn action" data-val="√">√</button>
+        <button class="btn sci-btn action" data-val="^">^</button>
+        <button class="btn" data-val="7">7</button>
+        <button class="btn" data-val="8">8</button>
+        <button class="btn" data-val="9">9</button>
+        <button class="btn operator" data-val="*">×</button>
+        
+        <button class="btn sci-btn action" data-val="sin(">sin</button>
+        <button class="btn sci-btn action" data-val="cos(">cos</button>
+        <button class="btn" data-val="4">4</button>
+        <button class="btn" data-val="5">5</button>
+        <button class="btn" data-val="6">6</button>
+        <button class="btn operator" data-val="-">-</button>
+        
+        <button class="btn sci-btn action" data-val="tan(">tan</button>
+        <button class="btn sci-btn action" data-val="log(">log</button>
+        <button class="btn" data-val="1">1</button>
+        <button class="btn" data-val="2">2</button>
+        <button class="btn" data-val="3">3</button>
+        <button class="btn operator" data-val="+">+</button>
+        
+        <button class="btn sci-btn action" data-val="π">π</button>
+        <button class="btn sci-btn action" data-val="e">e</button>
+        <button class="btn zero" data-val="0">0</button>
+        <button class="btn" data-val=".">.</button>
+        <button class="btn operator" id="equal">=</button>
+      </div>
     </div>
-    <div class="buttons">
-      <button class="btn action" id="clear">C</button>
-      <button class="btn action" data-val="+/-">+/-</button>
-      <button class="btn action" data-val="%">%</button>
-      <button class="btn operator" data-val="/">÷</button>
 
-      <button class="btn" data-val="7">7</button>
-      <button class="btn" data-val="8">8</button>
-      <button class="btn" data-val="9">9</button>
-      <button class="btn operator" data-val="*">×</button>
-
-      <button class="btn" data-val="4">4</button>
-      <button class="btn" data-val="5">5</button>
-      <button class="btn" data-val="6">6</button>
-      <button class="btn operator" data-val="-">-</button>
-
-      <button class="btn" data-val="1">1</button>
-      <button class="btn" data-val="2">2</button>
-      <button class="btn" data-val="3">3</button>
-      <button class="btn operator" data-val="+">+</button>
-
-      <button class="btn zero" data-val="0">0</button>
-      <button class="btn" data-val=".">.</button>
-      <button class="btn operator" id="equal">=</button>
+    <div id="convSection" class="hidden-section">
+      <select id="convCategory" class="conv-select" dir="rtl">
+        <option value="length">الطول</option>
+        <option value="weight">الوزن</option>
+        <option value="data">البيانات</option>
+      </select>
+      
+      <div class="conv-row" dir="rtl">
+        <input type="number" id="convInput1" value="1">
+        <select id="convUnit1" class="conv-select"></select>
+      </div>
+      
+      <button id="convSwap" class="theme-btn swap-btn">⇅</button>
+      
+      <div class="conv-row" dir="rtl">
+        <input type="number" id="convInput2" readonly>
+        <select id="convUnit2" class="conv-select"></select>
+      </div>
     </div>
+
   </div>
   <script src="script.js"></script>
 </body>
