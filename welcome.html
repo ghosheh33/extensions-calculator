@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8">
+  <title>مرحباً بك في الآلة الحاسبة الذكية</title>
+  <style>
+    :root {
+      --accent: #007aff;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-main: #202124;
+      --text-muted: #5f6368;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0 0 10px 0;
+      color: var(--accent);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 900px;
+      margin: -40px auto 40px auto;
+      padding: 0 20px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 0 0 10px 0;
+      color: var(--accent);
+    }
+    .card p {
+      margin: 0;
+      color: var(--text-muted);
+    }
+    .instructions {
+      margin-top: 40px;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+    }
+    .instructions h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    .instructions ul {
+      padding-right: 20px;
+    }
+    .instructions li {
+      margin-bottom: 10px;
+    }
+    .btn-start {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .btn-start:hover {
+      filter: brightness(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>تم التثبيت بنجاح! 🎉</h1>
+    <p>شكراً لاختيارك الآلة الحاسبة الذكية. أداتك الشاملة للحسابات والتحويلات أصبحت الآن جاهزة للاستخدام في متصفحك.</p>
+  </div>
+
+  <div class="container">
+    <div class="features-grid">
+      <div class="card">
+        <div class="card-icon">🧮</div>
+        <h3>حاسبة متطورة</h3>
+        <p>تصميم مدمج وأنيق يدعم الوضع القياسي والعلمي لحل أعقد المعادلات بسهولة، مع دعم كامل للوحة المفاتيح.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📏</div>
+        <h3>محول وحدات ذكي</h3>
+        <p>حول بين وحدات الطول، الوزن، والبيانات الرقمية بضغطة زر واحدة ومن نفس النافذة دون الحاجة لفتح مواقع خارجية.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">✨</div>
+        <h3>حساب النصوص المظللة</h3>
+        <p>ظلل أي معادلة رياضية في أي صفحة إنترنت، اضغط كليك يمين واختر "احسب" لتظهر لك النتيجة فوراً فوق النص.</p>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h2>كيف تبدأ؟</h2>
+      <ul>
+        <li>انقر على أيقونة <strong>قطعة البازل 🧩</strong> أعلى يمين المتصفح (أو يسار المتصفح حسب اللغة).</li>
+        <li>ابحث عن <strong>Smart Calculator</strong> واضغط على أيقونة <strong>الدبوس 📌</strong> لتثبيتها في شريط المهام لسهولة الوصول إليها.</li>
+        <li>انقر على أيقونة الإضافة لفتحها، واستكشف قائمة الإعدادات (⋮) لتغيير اللون أو الشكل حسب ذوقك.</li>
+        <li>لنسخ أي نتيجة، فقط انقر بالماوس على شاشة الأرقام داخل الآلة الحاسبة.</li>
+      </ul>
+      <a href="#" class="btn-start" onclick="window.close()">إغلاق والبدء بالاستخدام</a>
+    </div>
+  </div>
+
+</body>
+</html>

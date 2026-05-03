@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "الآلة الحاسبة",
-  "version": "2.0",
+  "version": "2.1",
   "description": "آلة حاسبة علمية ذكية مع ميزات النسخ السريع، سجل العمليات، وحساب النصوص المظللة.",
   "action": {
     "default_popup": "popup.html",
